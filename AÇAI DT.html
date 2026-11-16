@@ -1,0 +1,185 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="AÇAI D&T.jpeg" type="image/x-icon">
+        <title>Açaí D&T</title>
+        <style>
+            * { box-sizing: border-box; margin: 0; padding: 0; }
+            body {
+                background-image: url('fundo.jpg');
+                background-position: 3% top, right top;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                color: white;
+                font-family: sans-serif;
+                overflow-x: hidden;
+            }
+            .conteudo-central {
+                max-width: 750px;
+                margin: 40px auto;
+                background-color: rgba(43, 0, 43, 0.96); 
+                padding: 40px 30px;
+                border-radius: 20px;
+                box-shadow: 0px 15px 35px rgba(0,0,0,0.8);
+                border: 1px solid #4a004a;
+            }
+            .campo-grupo { margin-bottom: 20px; text-align: left; }
+            .campo-grupo label { display: block; margin-bottom: 8px; font-weight: bold; color: #ffcc00; }
+            .campo-grupo input, .campo-grupo select, .campo-grupo textarea {
+                width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #4a004a;
+                background-color: rgba(255, 255, 255, 0.1); color: white; font-size: 1em;
+            }
+            .campo-grupo input:focus, .campo-grupo select:focus, .campo-grupo textarea:focus {
+                outline: none; border-color: #ffcc00; background-color: rgba(255, 255, 255, 0.15);
+            }
+            .campo-grupo select option { background-color: #2b002b; color: white; }
+            .btn-enviar {
+                background-color: #25D366; color: white; text-decoration: none; padding: 18px 30px; 
+                font-weight: bold; font-size: 1.15em; border-radius: 30px; display: inline-block; 
+                box-shadow: 0px 5px 15px rgba(37,211,102,0.4); text-transform: uppercase; 
+                letter-spacing: 0.5px; width: 100%; max-width: 420px; margin-top: 15px; cursor: pointer; border: none;
+                text-align: center;
+            }
+            .btn-enviar:hover { background-color: #20ba5a; }
+            @media (max-width: 1200px) {
+                body { background-image: none; background-color: #2b002b; }
+                .conteudo-central { margin: 0; border-radius: 0; padding: 20px 15px; border: none; }
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="conteudo-central">
+            <!-- CABEÇALHO -->
+            <h1 style="text-align: center; margin-top: 10px; font-size: 2.2em; color: #ffffff;">Seja bem-vindo ao nosso Açaí!</h1>
+            <hr style="border: 1px solid #4a004a; width: 70%; margin: 20px auto;">
+            <p style="text-align: center; font-size: 1.15em; color: #f0e0f0;"><strong>O açaí mais cremoso e geladinho da região, montado do seu jeito.</strong></p>
+            
+            <!-- BANNER CENTRALIZADO -->
+            <div style="text-align: center; margin: 35px 0;">
+                <img src="fundo esquerdo.jpg" alt="Açaí D&T" style="width: 100%; max-width: 420px; border-radius: 15px; box-shadow: 0px 8px 20px rgba(0,0,0,0.6); border: 2px solid #ffcc00;">
+            </div>
+            
+            <!-- CARDÁPIO GOURMET -->
+            <div style="max-width: 600px; margin: 0 auto;">
+                <h2 style="color: #ffcc00; border-bottom: 2px solid #4a004a; padding-bottom: 8px; margin-top: 30px;">🍇 Nosso Cardápio Gourmet:</h2>
+                <ul style="padding-left: 20px; font-size: 1.1em; list-style-type: '💜 ';">
+                    <li style="margin-bottom: 18px;"><strong>Tradicional:</strong> O sabor clássico do açaí com a cremosidade que você ama. <br><span style="color: #00ff00; font-weight: bold; font-size: 1.05em;">R$ 25,00 cada</span></li>
+                    <li style="margin-bottom: 18px;"><strong>Mousse de Morango:</strong> A combinação perfeita do açaí com mousse cremosa de morango. <br><span style="color: #00ff00; font-weight: bold; font-size: 1.05em;">R$ 25,00 cada</span></li>
+                    <li style="margin-bottom: 18px;"><strong>Mousse de Maracujá:</strong> A refrescância do maracujá com a cremosidade do açaí. <br><span style="color: #00ff00; font-weight: bold; font-size: 1.05em;">R$ 25,00 cada</span></li>
+                    <li style="margin-bottom: 18px;"><strong>Nutella:</strong> Açaí com o sabor inconfundível de muita Nutella®. <br><span style="color: #00ff00; font-weight: bold; font-size: 1.05em;">R$ 25,00 cada</span></li>
+                </ul>
+
+                <br>
+                <!-- COMO PEDIR  -->
+                <h2 style="color: #ffcc00; border-bottom: 2px solid #4a004a; padding-bottom: 8px; margin-top: 20px;">📝 Como pedir:</h2>
+                <ol style="padding-left: 20px; font-size: 1.1em; line-height: 1.8; margin-bottom: 30px;">
+                    <li>Escolha o seu sabor favorito do cardápio gourmet acima.</li>
+                    <li>Preencha os campos abaixo com os seus dados de entrega.</li>
+                    <li>Clique no botão verde e envie a mensagem pré-formatada no WhatsApp!</li>
+                </ol>
+
+                <!-- FORMULÁRIO DO PEDIDO  -->
+                <h2 style="color: #ffcc00; border-bottom: 2px solid #4a004a; padding-bottom: 8px; margin-bottom: 20px;">🛒 Monte seu Pedido:</h2>
+                
+                <div id="containerPedido">
+                    <div class="campo-grupo">
+                        <label for="nome">Seu Nome:</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome completo">
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="sabor">Escolha o Sabor:</label>
+                        <select id="sabor">
+                            <option value="" disabled selected>Selecione uma opção</option>
+                            <option value="Tradicional">Tradicional - R$ 25,00</option>
+                            <option value="Mousse de Morango">Mousse de Morango - R$ 25,00</option>
+                            <option value="Mousse de Maracujá">Mousse de Maracujá - R$ 25,00</option>
+                            <option value="Nutella">Nutella - R$ 25,00</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="quantidade">Quantidade:</label>
+                        <input type="number" id="quantidade" min="1" value="1">
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="endereco">Endereço de Entrega:</label>
+                        <textarea id="endereco" rows="3" placeholder="Rua, número, bairro e pontos de referência"></textarea>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="pagamento">Forma de Pagamento:</label>
+                        <select id="pagamento">
+                            <option value="" disabled selected>Como deseja pagar?</option>
+                            <option value="Pix">Pix</option>
+                            <option value="Cartão de Crédito">Cartão de Crédito</option>
+                            <option value="Cartão de Débito">Cartão de Débito</option>
+                            <option value="Dinheiro">Dinheiro</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="observacoes">Observações (Opcional):</label>
+                        <input type="text" id="observacoes" placeholder="Ex: sem tal ingrediente, troco para...">
+                    </div>
+
+                    <div style="text-align: center; margin-top: 30px; margin-bottom: 30px;">
+                        <!-- O botão -->
+                        <a id="btnEnviarWhatsApp" href="https://wa.me/5561985021682" target="_blank" class="btn-enviar" onmousedown="prepararMensagem()">
+                            📱 Enviar Pedido via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <hr style="border: 1px solid #4a004a; width: 100%; margin: 0 auto;">
+            <!-- RODAPÉ ORIGINAL -->
+            <div style="text-align: center; margin-top: 35px; font-size: 1em; color: #d0b0d0; line-height: 1.8;">
+                <p>⏰ <strong>Horário de Funcionamento:</strong><br>Todos os dias das 14h às 22h</p>
+                <p>💳 <strong>Formas de pagamento:</strong><br>Pix, Cartão de Crédito e Débito</p>
+                <p>📍 Atendemos Brasília e Região</p>
+            </div>
+        </div>
+
+        <!-- SISTEMA DE PREPARAÇÃO  -->
+        <script>
+            function prepararMensagem() {
+                var num = "5561985021682";
+                var n = document.getElementById('nome').value.trim();
+                var s = document.getElementById('sabor').value;
+                var q = parseInt(document.getElementById('quantidade').value) || 1;
+                var e = document.getElementById('endereco').value.trim();
+                var p = document.getElementById('pagamento').value;
+                var o = document.getElementById('observacoes').value.trim() || "Nenhuma";
+
+                // travar o botão
+                if (!n || !s || !e || !p) {
+                    document.getElementById('btnEnviarWhatsApp').href = "https://wa.me/5561985021682" + num + "?text=" + encodeURIComponent("*Olá! Quero montar um pedido de Açaí.*");
+                    return;
+                }
+
+                var tot = q * 25;
+                var msg = `*Novo Pedido - Açaí D&T*\n\n👤 *Cliente:* ${n}\n🍧 *Sabor:* ${s}\n🔢 *Quantidade:* ${q}\n💰 *Valor Total:* R$ ${tot},00\n📍 *Endereço:* ${e}\n💳 *Pagamento:* ${p}\n📝 *Obs:* ${o}`;
+                
+                
+                var msg = `*Novo Pedido - Açaí D&T*\n\n`;
+                msg += `> *Cliente:* ${n}\n`;
+                msg += `> *Sabor:* ${s}\n`;
+                msg += `> *Quantidade:* ${q}\n`;
+                msg += `> *Valor Total:* R$ ${tot},00\n`;
+                msg += `> *Endereço:* ${e}\n`;
+                msg += `> *Pagamento:* ${p}\n`;
+                msg += `> *Obs:* ${o}`;
+
+
+                // link do botão 
+                document.getElementById('btnEnviarWhatsApp').href = "https://wa.me/" + num + "?text=" + encodeURIComponent(msg);
+            }
+        </script>
+    </body>
+    </html>
